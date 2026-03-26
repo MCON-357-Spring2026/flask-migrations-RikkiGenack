@@ -156,7 +156,7 @@ comment = db.Column(db.String(200), nullable=True)
 These changes update the Python models, but not yet the actual database tables.
 
 ### Part 7: Generate a second migration
-
+up to: 
 After adding the new model fields, run:
 ```bash
 flask --app src.migration_exercise.manage db migrate -m "add due_date to assignment and comment to grade"
