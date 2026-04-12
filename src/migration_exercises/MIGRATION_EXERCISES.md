@@ -156,7 +156,7 @@ comment = db.Column(db.String(200), nullable=True)
 These changes update the Python models, but not yet the actual database tables.
 
 ### Part 7: Generate a second migration
-
+up to: 
 After adding the new model fields, run:
 ```bash
 flask --app src.migration_exercise.manage db migrate -m "add due_date to assignment and comment to grade"
@@ -272,7 +272,9 @@ Reflection questions
 Answer these in your own words.
 - Why is changing the SQLAlchemy model not enough by itself?
 - What is the purpose of the migrations/ folder?
+  - 
 - Why is db upgrade safer than deleting and recreating the database?
+  - it allows you to make changes to your existing database. This will decrease the risk of inconsistencies.
 - Why do date columns usually need conversion before being returned in JSON?
-
+  -because they are passed in as a string and then need to be converted to datetime objects
 What could go wrong if a production database already contains real data?
